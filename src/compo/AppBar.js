@@ -9,7 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {withRouter} from 'react-router-dom'
 
- const Header = () => {
+ const Header = (props) => {
+   console.log(props)
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -21,7 +22,7 @@ import {withRouter} from 'react-router-dom'
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClicK = (pageUrl) => {
     setAnchorEl(null);
   };
 
@@ -65,12 +66,12 @@ import {withRouter} from 'react-router-dom'
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClose}
+                onClose={handleClicK()}
               >
-                <MenuItem onClick={handleClose}>Home</MenuItem>
-                <MenuItem onClick={handleClose}>Categories</MenuItem>
-                <MenuItem onClick={handleClose}>About</MenuItem>
-                <MenuItem onClick={handleClose}>Contact</MenuItem>
+                <MenuItem onClick={() =>handleClicK(null)}>Home</MenuItem>
+                <MenuItem onClick={handleClicK}>Categories</MenuItem>
+                <MenuItem onClick={handleClicK}>About</MenuItem>
+                <MenuItem onClick={handleClicK}>Contact</MenuItem>
               </Menu>
             </div>
           )}
