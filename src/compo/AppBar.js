@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {withRouter} from 'react-router-dom'
-import About from './About'
+
 
  const Header = (props) => {
    const {history}= props;

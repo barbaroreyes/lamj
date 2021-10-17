@@ -17,9 +17,10 @@ function App() {
     <div className="App">
       <AppBar/>
         <Switch>
-     <Route exact path='/'>
-       <Home/>
-     </Route>
+     <Route exact path='/'
+     render={props => <Home {...props}/>}/>
+       
+     
      <Route exact path='/categories'>
        Categories
      </Route>
