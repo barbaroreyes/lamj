@@ -3,7 +3,7 @@ import React from 'react';
 const Categorias = () => {
   return (
     <div>
-      categoria-compo
+      Categorias
     </div>
   );
 }

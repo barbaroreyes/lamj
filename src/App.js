@@ -1,9 +1,11 @@
 import React from 'react'
-import {Switch , Route} from 'react-router-dom'
+import {Switch , Route} from 'react-router-dom';
 // import StripeCheckout from 'react-stripe-checkout';
 import  AppBar from   './compo/AppBar';
-import About from './compo/About'
+import About from './pages/About'
 import Home from './pages/Home'
+import Categorias from './pages/Categorias';
+import Contact from './pages/Contact';
 // import List from './compo/ListImages'
 import './App.css';
 
@@ -22,13 +24,13 @@ function App() {
        
      
      <Route exact path='/categories'>
-       Categories
+       <Categorias/>
      </Route>
      <Route exact path='/about'>
-       about
+       <About/>
      </Route>
      <Route exact path='/contact'>
-       about
+       <Contact/>
      </Route>
     
    </Switch>
