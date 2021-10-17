@@ -67,8 +67,10 @@ import {withRouter} from 'react-router-dom'
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Home</MenuItem>
+                <MenuItem onClick={handleClose}>Categories</MenuItem>
+                <MenuItem onClick={handleClose}>About</MenuItem>
+                <MenuItem onClick={handleClose}>Contact</MenuItem>
               </Menu>
             </div>
           )}
