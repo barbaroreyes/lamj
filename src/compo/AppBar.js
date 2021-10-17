@@ -68,10 +68,10 @@ import {withRouter} from 'react-router-dom'
                 open={Boolean(anchorEl)}
                 onClose={handleClick}
               >
-                <MenuItem onClick={() =>handleClick(null)}>Home</MenuItem>
-                {/* <MenuItem onClick={handleClose}>Categories</MenuItem>
-                <MenuItem onClick={handleClose}>About</MenuItem>
-                <MenuItem onClick={handleClose}>Contact</MenuItem> */}
+                <MenuItem onClick={() =>handleClick}>Home</MenuItem>
+                <MenuItem onClick={() =>handleClick}>Categories</MenuItem>
+                <MenuItem onClick={() =>handleClick}>About</MenuItem>
+                <MenuItem onClick={() =>handleClick}>Contact</MenuItem>
               </Menu>
             </div>
           )}
