@@ -38,7 +38,7 @@ import {withRouter} from 'react-router-dom'
         <Toolbar>
          
           <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
-            Header
+           La Mango Jewelry
           </Typography>
           {auth && (
             <div>
