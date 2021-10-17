@@ -22,7 +22,7 @@ import {withRouter} from 'react-router-dom'
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClicK = (pageUrl) => {
+  const handleClick = (pageRoute) => {
     setAnchorEl(null);
   };
 
@@ -66,12 +66,12 @@ import {withRouter} from 'react-router-dom'
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClicK()}
+                onClose={handleClick}
               >
-                <MenuItem onClick={() =>handleClicK(null)}>Home</MenuItem>
-                <MenuItem onClick={handleClicK}>Categories</MenuItem>
-                <MenuItem onClick={handleClicK}>About</MenuItem>
-                <MenuItem onClick={handleClicK}>Contact</MenuItem>
+                <MenuItem onClick={() =>handleClick(null)}>Home</MenuItem>
+                {/* <MenuItem onClick={handleClose}>Categories</MenuItem>
+                <MenuItem onClick={handleClose}>About</MenuItem>
+                <MenuItem onClick={handleClose}>Contact</MenuItem> */}
               </Menu>
             </div>
           )}
