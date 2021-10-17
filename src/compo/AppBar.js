@@ -8,9 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {withRouter} from 'react-router-dom'
+import About from './About'
 
  const Header = (props) => {
-   console.log(props)
+   const {history}= props;
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -23,6 +24,7 @@ import {withRouter} from 'react-router-dom'
   };
 
   const handleClick = (pageRoute) => {
+    history.push(pageRoute)
     setAnchorEl(null);
   };
 
@@ -32,7 +34,7 @@ import {withRouter} from 'react-router-dom'
       <AppBar 
       position="static" 
       style={{
-        backgroundColor:'black',
+        // backgroundColor:'black',
         color :'gold'
       }}
       >
@@ -66,12 +68,12 @@ import {withRouter} from 'react-router-dom'
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={()=>handleClick(null)}
+                onClose={()=>setAnchorEl(null)}
               >
-                <MenuItem onClick={() =>handleClick}>Home</MenuItem>
-                <MenuItem onClick={() =>handleClick}>Categories</MenuItem>
-                <MenuItem onClick={() =>handleClick}>About</MenuItem>
-                <MenuItem onClick={() =>handleClick}>Contact</MenuItem>
+                <MenuItem onClick={() =>handleClick('/')}>Home</MenuItem>
+                <MenuItem onClick={() =>handleClick('/categories')}>Categories</MenuItem>
+                <MenuItem onClick={() =>handleClick('/about')}>About</MenuItem>
+                <MenuItem onClick={() =>handleClick('/contact')}>Contact</MenuItem>
               </Menu>
             </div>
           )}
