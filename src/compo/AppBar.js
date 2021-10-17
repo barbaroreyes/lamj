@@ -66,7 +66,7 @@ import {withRouter} from 'react-router-dom'
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClick}
+                onClose={()=>handleClick(null)}
               >
                 <MenuItem onClick={() =>handleClick}>Home</MenuItem>
                 <MenuItem onClick={() =>handleClick}>Categories</MenuItem>
