@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
+import StripeCheckout from 'react-stripe-checkout';
+import  AppBar from   './compo/AppBar';
 import './App.css';
 
 function App() {
+
+  const onToken = (token) => {
+    console.log(token)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AppBar/>
+      {/* <StripeCheckout
+        token={onToken}
+        stripeKey="pk_live_51JkyRMLm3LiulVebwtzLghNlEl99W5u7kXuHgQfFmx8t8tG02z25ezrRktAlx2OeFVMrIYQEzp1P8AQ0v48Gu1B300P3z7YUIz"
+        name='pepe'
+        currency='USD'
+        amount='100'
+      /> */}
     </div>
   );
 }
