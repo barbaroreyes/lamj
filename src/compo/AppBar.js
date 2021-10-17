@@ -34,7 +34,7 @@ import About from './About'
       <AppBar 
       position="static" 
       style={{
-        // backgroundColor:'black',
+        backgroundColor:'black',
         color :'gold'
       }}
       >
