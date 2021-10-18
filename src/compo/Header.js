@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import {AppBar,IconButton,Toolbar} from '@mui/material'
+import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 const useStyles = makeStyles((theme)=>({
@@ -39,7 +39,15 @@ const useStyles = makeStyles((theme)=>({
     },
     godawn:{
         color:'gold',
-        fontSize:'4rem'
+        fontSize:'6rem'
+    },parrafo:{
+        color:'gold',
+        textAlign: 'center',
+        fontSize:'4rem',
+        fontFamily: 'Dancing Script'
+        
+    },button:{
+        border: '4px solid'
     }
   }))
 
@@ -58,16 +66,19 @@ const Header = () => {
       <IconButton>
       <MenuIcon  className={classes.icon}/>
       </IconButton>
-
-     
-  
-        </Toolbar>
-        <h1>Bienvenido Sientete En Casa </h1>
-        <IconButton>
+     </Toolbar>
+  </AppBar>
+  <Collapse in={true}>
+  <div className={classes.container}>
+  <h1> Hola... Bienvenido  </h1>
+        <IconButton className={classes.button}>
+            <p className={classes.parrafo}>Hoy Es Dia Para Brillar</p>
         <ExpandMoreIcon className={classes.godawn}/>
     </IconButton>
-      
-    </AppBar>
+  </div>
+
+  </Collapse>
+  
    
 
   </div>
