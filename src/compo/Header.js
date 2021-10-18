@@ -1,16 +1,20 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import {AppBar,IconButton,Toolbar} from '@mui/material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 const useStyles = makeStyles((theme)=>({
     root:{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh'
+        height: '100vh',
+        color: 'gold',
+        fontFamily: 'Dancing Script',
+        fontSize: '4rem'
     },
     appbar:{
-    
+     textAlign: 'center',
     },
     icon:{
         color:'gold',
@@ -23,24 +27,26 @@ const useStyles = makeStyles((theme)=>({
     appbarwrap:{
         width:'80%',
         margin:'0 auto',
+        display:'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
         
 
     },
     colorText:{
         textAlign: 'center'
 
+    },
+    godawn:{
+        color:'gold',
+        fontSize:'4rem'
     }
   }))
 
 const Header = () => {
     const classes = useStyles()
   return (
-  <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      
-  }}>
+  <div className={classes.root}>
       <AppBar style={{
         backgroundColor:'transparent',
         color :'gold',
@@ -52,9 +58,17 @@ const Header = () => {
       <IconButton>
       <MenuIcon  className={classes.icon}/>
       </IconButton>
+
+     
+  
         </Toolbar>
-      <div><h1>Bienvenido <hr/> Entra Sientete  <span className={classes.colorText}>En Casa</span> </h1></div>
+        <h1>Bienvenido Sientete En Casa </h1>
+        <IconButton>
+        <ExpandMoreIcon className={classes.godawn}/>
+    </IconButton>
+      
     </AppBar>
+   
 
   </div>
     
