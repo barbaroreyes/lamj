@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {withRouter} from 'react-router-dom'
-
+import ImageAvatars from  '../compo/Logo'
 
  const Header = (props) => {
    const {history}= props;
@@ -38,6 +38,7 @@ import {withRouter} from 'react-router-dom'
         color :'gold'
       }}
       >
+        <ImageAvatars/>
         <Toolbar>
          
           <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
