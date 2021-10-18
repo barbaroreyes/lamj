@@ -3,43 +3,61 @@ import { makeStyles } from '@mui/styles';
 import {AppBar,IconButton,Toolbar} from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 const useStyles = makeStyles((theme)=>({
+    root:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh'
+    },
     appbar:{
-      background:'none',
-      fontFamily:'Dancing Script'
-
-     
+    
     },
     icon:{
-        color:'#FFFFFF',
+        color:'gold',
         fontSize:'2rem'
     },
     appTitle:{
-        flexGrow:'1'
+        flexGrow:'1',
+        color:'gold',
     },
     appbarwrap:{
         width:'80%',
-        margin:'0 auto'
+        margin:'0 auto',
+        
+
+    },
+    colorText:{
+        textAlign: 'center'
+
     }
   }))
 
 const Header = () => {
     const classes = useStyles()
   return (
-    <AppBar  className ={classes.appbar} elevation={0}>
+  <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      
+  }}>
+      <AppBar style={{
+        backgroundColor:'transparent',
+        color :'gold',
+        fontFamily:'Dancing Script',
+        fontSize :'39px'
+      }}elevation={0}>
         <Toolbar className={classes.appbarwrap}>
-        <h1 className={classes.appTitle}> LA Mango</h1>
-      <IconButton
-    //    size="large"
-    //    edge="start"
-    //    color="inherit"
-    //    aria-label="menu"
-    //    sx={{ mr: 2 }}
-      >
+        <h1 className={classes.appTitle}> LA Mango Jewelry</h1>
+      <IconButton>
       <MenuIcon  className={classes.icon}/>
       </IconButton>
         </Toolbar>
-     
+      <div><h1>Bienvenido <hr/> Entra Sientete  <span className={classes.colorText}>En Casa</span> </h1></div>
     </AppBar>
+
+  </div>
+    
   );
 }
 
