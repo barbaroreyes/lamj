@@ -1,6 +1,7 @@
 import  React ,{useState,useEffect}from 'react';
 import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
+import ImageCard from '../compo/IMageCard'
 import Nav from '../compo/AppBar'
 import { makeStyles } from '@mui/styles';
 
@@ -30,6 +31,7 @@ export default function MyComponent(props) {
        <Nav/>
     </IconButton>
     categorias 
+      <ImageCard/>
       </Collapse>
     
   </main>;
