@@ -17,8 +17,9 @@ const useStyles = makeStyles({
   
 });
 
-export default function MyComponent(props) {
-  const classes = useStyles(props);
+export default function MyComponent({jollas}) {
+  console.log(jollas,'in imageCard')
+  const classes = useStyles();
   const [checked ,setChecked] = useState(false)
   useEffect(() => {
       setChecked(true)
@@ -30,8 +31,17 @@ export default function MyComponent(props) {
       ><IconButton>
        <Nav/>
     </IconButton>
-    categorias 
-      <ImageCard/>
+    {jollas.map((item,i)=>{
+      return(
+        <ImageCard
+        key={i}
+         {...item}/>
+
+      )
+
+    })}
+
+      
       </Collapse>
     
   </main>;

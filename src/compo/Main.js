@@ -15,6 +15,7 @@ const useStyles = makeStyles({
 });
 
 export default function MyComponent(props) {
+  console.log('props in main',props)
   const classes = useStyles(props);
   const [checked ,setChecked] = useState(false)
   useEffect(() => {

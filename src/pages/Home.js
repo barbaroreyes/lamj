@@ -15,7 +15,7 @@ export default function MyComponent(props) {
   const classes = useStyles(props);
   return <div className={classes.root} >
      <Header/>
-     <Main/>
+     <Main {...props}/>
      {/* <Ofertas/> */}
   </div>;
 }

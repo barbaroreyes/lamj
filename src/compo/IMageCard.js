@@ -7,22 +7,21 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function ImageCard(props) {
+  console.log(props,'en image id')
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardMedia
         component="img"
-        
         height="140"
-        image="https://lamjce9b1a58db81496d90b0f125b07c8929185751-dev.s3.amazonaws.com/public/Agollas.jpeg"
+        image={props.image}
         alt="aretes"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Aretes
+          {props.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {/* Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica */}
+         {props.description}
         </Typography>
       </CardContent>
       <CardActions>
