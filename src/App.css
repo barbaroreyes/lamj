@@ -39,7 +39,12 @@ main{
   border: 3px solid #fff;
   text-align: center;
   color: gold;
-}footer{
+}
+span{
+  padding:1px;
+  
+}
+footer{
   width: 100%;
   border: 3px solid #fff;
   padding: 20px;
