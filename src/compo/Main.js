@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Header from '../compo/Header';
-import Main from '../compo/Main';
+
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -12,8 +11,7 @@ const useStyles = makeStyles({
 
 export default function MyComponent(props) {
   const classes = useStyles(props);
-  return <div className={classes.root} >
-     <Header/>
-     <Main/>
-  </div>;
+  return <main className={classes.root} >
+    <h1 className='name'>La Mango Jewellery</h1>
+  </main>;
 }
