@@ -9,6 +9,10 @@ header{
   justify-content:space-evenly;
   flex-direction: row-reverse;
   align-items: center;
+  border: none;
+  border: 1px solid #fff;
+  padding: 30px;
+  
 }
 @media (max-width: 768px) {
 .App {
@@ -18,7 +22,7 @@ header{
 }header{
   padding:10px;
   width: 100%;
-  border: 2px solid #fff;
+  /* border: 1px solid #fff; */
   display: flex;
   justify-content:space-around;
   align-items:center;
@@ -36,7 +40,7 @@ main{
   align-items: center;
   width: 100%;
   min-height: 650px;
-  border: 3px solid #fff;
+  /* border: 3px solid #fff; */
   text-align: center;
   color: gold;
 }
@@ -46,7 +50,7 @@ span{
 }
 footer{
   width: 100%;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   padding: 10px;
 }
 
