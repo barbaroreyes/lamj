@@ -17,11 +17,14 @@ const useStyles = makeStyles({
 export default function MyComponent(props) {
   const classes = useStyles(props);
   return <main className={classes.root} >
-    <h1 className='name'>
+      <Collapse in={true}>
+      <h1 className='name'>
         La Mango <span>Jewellery</span>
     </h1>
     <IconButton className={classes.button}>
         <ExpandMoreIcon className={classes.godawn}/>
     </IconButton>
+      </Collapse>
+    
   </main>;
 }
