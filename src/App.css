@@ -4,7 +4,7 @@
  background-size: cover;
  background-attachment: fixed;
 }
-header{
+.header{
   display: flex;
   justify-content:space-evenly;
   flex-direction: row-reverse;

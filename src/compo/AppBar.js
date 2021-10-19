@@ -2,22 +2,17 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import {withRouter} from 'react-router-dom'
-import ImageAvatars from  '../compo/Logo'
 
- const Header = (props) => {
+
+ const Nav = (props) => {
    const {history}= props;
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -34,16 +29,16 @@ import ImageAvatars from  '../compo/Logo'
       <AppBar 
       position="static" 
       style={{
-        backgroundColor:'black',
+        backgroundColor:'transparent',
         color :'gold'
       }}
       >
-        <ImageAvatars/>
+        {/* <ImageAvatars/> */}
         <Toolbar>
          
-          <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
-           La Mango Jewelry
-          </Typography>
+          {/* <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
+          
+          </Typography> */}
           {auth && (
             <div>
                <IconButton
@@ -83,4 +78,4 @@ import ImageAvatars from  '../compo/Logo'
     </Box>
   );
 }
-export default withRouter( Header); 
+export default withRouter( Nav); 

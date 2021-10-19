@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MyComponent(props) {
+export default function Footer(props) {
   const classes = useStyles(props);
   return <footer className={classes.root} >
      footer

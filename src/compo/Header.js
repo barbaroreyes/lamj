@@ -63,35 +63,10 @@ const useStyles = makeStyles((theme)=>({
 const Header = () => {
     const classes = useStyles()
   return (
-  <header>
+  <header className='header'>
      
     <div className= 'name1'>Bienvenidos  </div>
-      {/* <AppBar style={{
-        backgroundColor:'transparent',
-        color :'gold',
-        fontFamily:'Dancing Script',
-        fontSize :'39px'
-      }}elevation={0}>
-        <Toolbar className={classes.appbarwrap}>
-        <h1 className={classes.appTitle}> LA Mango Jewelry</h1>
-      <IconButton>
-      <MenuIcon  className={classes.icon}/>
-      </IconButton>
-     </Toolbar>
-  </AppBar> */}
-  <Collapse in ={true}>
-      {/* <h1>hello</h1> */}
-  {/* <div className={classes.container}>
-  <h1 className={classes.text1}> Hola...
-  <span>Toca Brillar</span>
-  </h1>
-  
-    <IconButton className={classes.button}>
-        <ExpandMoreIcon className={classes.godawn}/>
-    </IconButton>
-  </div> */}
-
-  </Collapse>
+     
   </header>
     
   );
