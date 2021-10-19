@@ -27,7 +27,7 @@ import {withRouter} from 'react-router-dom'
     <Box sx={{ flexGrow: 1 }}>
     
       <AppBar 
-      position="static" 
+      
       style={{
         backgroundColor:'transparent',
         color :'gold'
@@ -67,7 +67,7 @@ import {withRouter} from 'react-router-dom'
                 onClose={()=>setAnchorEl(null)}
               >
                 <MenuItem onClick={() =>handleClick('/')}>Home</MenuItem>
-                <MenuItem onClick={() =>handleClick('/categories')}>Categories</MenuItem>
+                <MenuItem onClick={() =>handleClick('/categorias')}>Categories</MenuItem>
                 <MenuItem onClick={() =>handleClick('/about')}>About</MenuItem>
                 <MenuItem onClick={() =>handleClick('/contact')}>Contact</MenuItem>
               </Menu>

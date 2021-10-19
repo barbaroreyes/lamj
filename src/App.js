@@ -1,18 +1,14 @@
 import {Switch , Route} from 'react-router-dom';
 // import StripeCheckout from 'react-stripe-checkout';
-// import  AppBar from   './compo/AppBar';
-// import About from './pages/About'
+import About from './pages/About'
 import Home from './pages/Home'
-// import Categorias from './pages/Categorias';
-// import Contact from './pages/Contact';
-
-// import Mycompo from './pages/Home'
-// import List from './compo/ListImages'
+import Categorias from './pages/Categorias';
+import Contact from './pages/Contact';
 import './App.css';
 import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Header from './compo/Header';
+
 
 const useStyles = makeStyles((theme)=>({
   root:{
@@ -33,6 +29,15 @@ export default function App() {
     <Switch>
       <Route exact path ='/'>
         <Home />
+      </Route>
+      <Route exact path ='/categorias'>
+        <Categorias/>
+      </Route>
+      <Route exact path ='/about'>
+        <About/>
+      </Route>
+      <Route exact path ='/contact'>
+        <Contact/>
       </Route>
     </Switch>
      

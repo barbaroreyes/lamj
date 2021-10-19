@@ -65,7 +65,7 @@ const Header = () => {
   return (
   <header className='header'>
      
-    <div className= 'name1'>Bienvenidos  </div>
+    <div className= 'name1'> </div>
      
   </header>
     
