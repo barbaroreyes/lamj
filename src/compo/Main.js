@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -22,7 +24,8 @@ export default function MyComponent(props) {
         La Mango <span>Jewellery</span>
     </h1>
     <IconButton className={classes.button}>
-        <ExpandMoreIcon className={classes.godawn}/>
+        <HomeOutlinedIcon className={classes.godawn}/>
+    
     </IconButton>
       </Collapse>
     
