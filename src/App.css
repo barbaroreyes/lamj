@@ -14,6 +14,39 @@
   padding: 30px;
   
 }
+.name{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width: 80%;
+  height: 300px;
+ color:'red';
+ font-family: 'Dancing Script';
+font-size: 78px;
+border-radius: 50px 50px;
+/* border: 4px solid gold; */
+padding: 15px;
+
+}
+.name1{
+  color: gold
+
+  }
+main{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  min-height: 650px;
+  /* border: 3px solid #fff; */
+  text-align: center;
+  color: gold;
+}
+span{
+  padding:1px;
+  
+}
 footer{
   
   border: 2px solid #fff;
