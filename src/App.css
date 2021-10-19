@@ -15,7 +15,7 @@ header{
   
 }
 footer{
-  width: 100%;
+  
   border: 2px solid #fff;
   padding: 10px;
   color: gold;
@@ -32,12 +32,22 @@ footer{
   display: flex;
   justify-content:space-around;
   align-items:center;
-  color:'gold'
+  color:'gold';
+  background: none
 }
 }.name{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width: 80%;
+  height: 500px;
  color:'red';
  font-family: 'Dancing Script';
-font-size: 88px;
+font-size: 78px;
+border-radius: 50px 50px;
+/* border: 4px solid gold; */
+padding: 15px;
 
 }
 main{
