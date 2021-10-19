@@ -64,8 +64,8 @@ const Header = () => {
     const classes = useStyles()
   return (
   <header>
-     <MenuIcon  className={classes.icon}/>
-    
+     
+    <div className= 'name1'>Bienvenidos  </div>
       {/* <AppBar style={{
         backgroundColor:'transparent',
         color :'gold',

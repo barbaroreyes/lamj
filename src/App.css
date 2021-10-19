@@ -49,7 +49,10 @@ border-radius: 50px 50px;
 /* border: 4px solid gold; */
 padding: 15px;
 
-}
+}.name1{
+  color: gold
+
+  }
 main{
   display: flex;
   justify-content: center;
@@ -64,12 +67,12 @@ span{
   padding:1px;
   
 }
-footer{
+/* footer{
   width: 100%;
   border: 2px solid #fff;
   padding: 10px;
   color: gold;
-}
+} */
 
 /* .App-logo {
   height: 40vmin;

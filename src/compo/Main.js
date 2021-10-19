@@ -1,8 +1,6 @@
 import  React ,{useState,useEffect}from 'react';
 import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -31,7 +29,7 @@ export default function MyComponent(props) {
         La Mango <span>Jewellery</span>
     </h1>
     <IconButton>
-        <HomeOutlinedIcon className={classes.godawn}/>
+        <MenuIcon className={classes.godawn}/>
     
     </IconButton>
       </Collapse>

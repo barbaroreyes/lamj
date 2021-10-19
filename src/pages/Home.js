@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Header from '../compo/Header';
 import Main from '../compo/Main';
+import Ofertas from '../compo/Ofertas';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -15,5 +16,6 @@ export default function MyComponent(props) {
   return <div className={classes.root} >
      <Header/>
      <Main/>
+     {/* <Ofertas/> */}
   </div>;
 }
