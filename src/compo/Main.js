@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React ,{useState,useEffect}from 'react';
 import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
@@ -11,19 +11,26 @@ const useStyles = makeStyles({
     color: (props) => props.color,
   },godawn:{
       color:'gold',
-      fontSize: '3rem',
+      fontSize: '4rem',
     
   }
 });
 
 export default function MyComponent(props) {
   const classes = useStyles(props);
+  const [checked ,setChecked] = useState(false)
+  useEffect(() => {
+      setChecked(true)
+  },[])
   return <main className={classes.root} >
-      <Collapse in={true}>
+      <Collapse 
+      in={checked}
+      {...(checked ? {timeout:1000}:{})}
+      >
       <h1 className='name'>
         La Mango <span>Jewellery</span>
     </h1>
-    <IconButton className={classes.button}>
+    <IconButton>
         <HomeOutlinedIcon className={classes.godawn}/>
     
     </IconButton>
