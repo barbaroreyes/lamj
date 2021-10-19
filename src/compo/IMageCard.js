@@ -13,12 +13,12 @@ export default function ImageCard(props) {
         component="img"
         
         height="140"
-        image="https://images.unsplash.com/photo-1587593692659-38c32c496642?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmluZ3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        image="https://lamjce9b1a58db81496d90b0f125b07c8929185751-dev.s3.amazonaws.com/public/Agollas.jpeg"
         alt="aretes"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Aretes
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {/* Lizards are a widespread group of squamate reptiles, with over 6,000
