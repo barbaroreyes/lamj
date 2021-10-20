@@ -27,7 +27,7 @@ export default function MyComponent({jollas}) {
   return <main className={classes.root} >
       <Collapse 
       in={checked}
-      {...(checked ? {timeout:3050}:{})}
+      {...(checked ? {timeout:1000}:{})}
       ><IconButton>
        <Nav/>
     </IconButton>

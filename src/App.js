@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme)=>({
 
 export default function App() {
   const classes = useStyles();
-
+  //  const categoriaFiltrada = listPrendas.filter(item => item.categoria)
+  //  console.log(categoriaFiltrada,'filtrada')
  const [jollas,setJollas] =useState([])
 
  useEffect(()=>{
@@ -52,6 +53,13 @@ export default function App() {
      
    }
  }
+  
+//  const filetred = () =>{
+//    const filter = jollas.filter(item => item.categoria ==='Aretes')
+//  console.log(filter,'filter')
+//  }
+
+ 
 
 
   return <div className={classes.root}>
@@ -61,6 +69,7 @@ export default function App() {
       </Route>
       <Route exact path ='/categorias'>
         <Categorias jollas={jollas}/>
+       
       </Route>
       <Route exact path ='/about'>
         <About/>
