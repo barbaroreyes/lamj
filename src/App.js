@@ -32,20 +32,20 @@ const useStyles = makeStyles((theme)=>({
 
 export default function App() {
   const classes = useStyles();
-  //  const categoriaFiltrada = listPrendas.filter(item => item.categoria)
-  //  console.log(categoriaFiltrada,'filtrada')
+  
  const [jollas,setJollas] =useState([])
+ const [cate,setCate] =useState([])
 
  useEffect(()=>{
    fechtJollas()
  },[])
 
-
+ 
 
  const fechtJollas = async () =>{
    try {
      const jollasData = await API.graphql(graphqlOperation(listPrendas))
-     const jollasList = jollasData.data.listPrendas.items
+     const jollasList = jollasData.data.listPrendas.items.filter(item => item.categoria)
      console.log( 'lista de jollas',jollasList)
      setJollas(jollasList)
      
@@ -53,11 +53,7 @@ export default function App() {
      
    }
  }
-  
-//  const filetred = () =>{
-//    const filter = jollas.filter(item => item.categoria ==='Aretes')
-//  console.log(filter,'filter')
-//  }
+  console.log(cate,'cate')
 
  
 
@@ -66,9 +62,10 @@ export default function App() {
     <Switch>
       <Route exact path ='/'>
         <Home />
+       
       </Route>
       <Route exact path ='/categorias'>
-        <Categorias jollas={jollas}/>
+        <Categorias jollas ={jollas}/>
        
       </Route>
       <Route exact path ='/about'>

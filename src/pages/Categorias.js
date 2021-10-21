@@ -21,28 +21,33 @@ export default function MyComponent({jollas}) {
   console.log(jollas,'in imageCard')
   const classes = useStyles();
   const [checked ,setChecked] = useState(false)
+  const [categ ,setCategoria] = useState([])
   useEffect(() => {
       setChecked(true)
   },[])
-  return <main className={classes.root} >
-      <Collapse 
+    const filtereCat = [...new Set(jollas.map(item => item.categoria))]
+    console.log('filter',filtereCat)
+  return (<main className={classes.root} >
+           
+     
+      {/* <Collapse 
       in={checked}
       {...(checked ? {timeout:1000}:{})}
       ><IconButton>
        <Nav/>
-    </IconButton>
-    {jollas.map((item,i)=>{
-      return(
-        <ImageCard
-        key={i}
-         {...item}/>
-
-      )
-
-    })}
+    </IconButton> */}
+       <h1>Categorias</h1>
+       <div className='categoria'>
+       {filtereCat}
+       </div>
+       
 
       
-      </Collapse>
+
+   
+
+      
+      {/* </Collapse> */}
     
-  </main>;
+  </main>)
 }
