@@ -2,7 +2,8 @@ import  React ,{useState,useEffect}from 'react';
 import {AppBar,Collapse,IconButton,Toolbar} from '@mui/material'
 // import Box from '@mui/material/Box';
 import ImageCard from '../compo/IMageCard'
-import Nav from '../compo/AppBar'
+import Nav from '../compo/AppBar';
+import Categoria from '../compo/Categoria'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -25,8 +26,12 @@ export default function MyComponent({jollas}) {
   useEffect(() => {
       setChecked(true)
   },[])
-    const filtereCat = [...new Set(jollas.map(item => item.categoria))]
-    console.log('filter',filtereCat)
+    const filtereCat = [...new Set(jollas.map((item,i => {
+      return (
+         <></>
+      )
+    }))]
+   
   return (<main className={classes.root} >
            
      
