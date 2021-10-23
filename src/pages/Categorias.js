@@ -26,10 +26,8 @@ export default function MyComponent({jollas}) {
   useEffect(() => {
       setChecked(true)
   },[])
-    const filtereCat = [...new Set(jollas.map((item,i => {
-      return (
-         <></>
-      )
+    const filtereCat = [...new Set(jollas.map((item,i )=> {
+     return(<Categoria {...item}/>)
     }))]
    
   return (<main className={classes.root} >
