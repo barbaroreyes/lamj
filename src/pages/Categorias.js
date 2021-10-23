@@ -18,17 +18,14 @@ const useStyles = makeStyles({
   
 });
 
-export default function MyComponent({jollas}) {
-  console.log(jollas,'in imageCard')
+export default function MyComponent(props) {
+  // console.log(jollas,'in imageCard')
   const classes = useStyles();
   const [checked ,setChecked] = useState(false)
   const [categ ,setCategoria] = useState([])
   useEffect(() => {
       setChecked(true)
   },[])
-    const filtereCat = [...new Set(jollas.map((item,i )=> {
-     return(<Categoria {...item}/>)
-    }))]
    
   return (<main className={classes.root} >
            
@@ -41,7 +38,8 @@ export default function MyComponent({jollas}) {
     </IconButton> */}
        <h1>Categorias</h1>
        <div className='categoria'>
-       {filtereCat}
+         <Categoria {...props}/>
+       
        </div>
        
 
