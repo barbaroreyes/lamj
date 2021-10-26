@@ -26,7 +26,7 @@ const fetchCate = async () =>{
 
   return (
     <div className="categoria">
-      <p className='nam'>Categorias</p>
+      {/* <p className='nam'>Categorias</p> */}
       {
         cate.map((item,i)=>{
           return (
