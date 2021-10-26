@@ -36,3 +36,30 @@ export const listPrendas = /* GraphQL */ `
     }
   }
 `;
+export const getCate = /* GraphQL */ `
+  query GetCate($id: ID!) {
+    getCate(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listCates = /* GraphQL */ `
+  query ListCates(
+    $filter: ModelCateFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

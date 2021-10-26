@@ -52,3 +52,42 @@ export const deletePrendas = /* GraphQL */ `
     }
   }
 `;
+export const createCate = /* GraphQL */ `
+  mutation CreateCate(
+    $input: CreateCateInput!
+    $condition: ModelCateConditionInput
+  ) {
+    createCate(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateCate = /* GraphQL */ `
+  mutation UpdateCate(
+    $input: UpdateCateInput!
+    $condition: ModelCateConditionInput
+  ) {
+    updateCate(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteCate = /* GraphQL */ `
+  mutation DeleteCate(
+    $input: DeleteCateInput!
+    $condition: ModelCateConditionInput
+  ) {
+    deleteCate(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;

@@ -105,11 +105,31 @@ span{
   padding:1px;
   
 }.categoria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:10px;
+  /* margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; */
+}.categoria-box{
   margin: 20px;
+  height: 100px;
+  border: 1px solid gold;
+  width: 100px;
+  color: gold;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+border-radius: 120px 100px;
+text-align: center;
+
+}.nam{
+  color: gold;
+
 }
 }
 /* footer{

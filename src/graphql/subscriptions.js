@@ -43,3 +43,33 @@ export const onDeletePrendas = /* GraphQL */ `
     }
   }
 `;
+export const onCreateCate = /* GraphQL */ `
+  subscription OnCreateCate {
+    onCreateCate {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateCate = /* GraphQL */ `
+  subscription OnUpdateCate {
+    onUpdateCate {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteCate = /* GraphQL */ `
+  subscription OnDeleteCate {
+    onDeleteCate {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
