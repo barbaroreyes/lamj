@@ -38,8 +38,8 @@ export default function MyComponent(props) {
     </IconButton> */}
        <h1>Categorias</h1>
        <div className='categoria'>
-         <Categoria {...props}/>
-       
+         {/* <Categoria {...props}/>
+        */}
        </div>
        
 
