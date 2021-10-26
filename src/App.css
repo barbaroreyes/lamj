@@ -108,15 +108,17 @@ span{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding:10px;
+  padding:25px;
+  margin: 3px;
   /* margin: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center; */
 }.categoria-box{
-  margin: 20px;
-  height: 100px;
+ padding:6px;
+  margin: 9px;
+  height: 116px;
   border: 1px solid gold;
   width: 100px;
   color: rgb(235, 233, 222);

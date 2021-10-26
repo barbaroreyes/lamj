@@ -10,4 +10,5 @@ type Prendas @model {
 type Cate @model{
 id: ID!
 name: String!
+price: Float
 }

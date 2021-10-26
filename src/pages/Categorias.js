@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {API,graphqlOperation} from 'aws-amplify'
 import {listCates} from '../graphql/queries'
 import Categoria from '../compo/Categoria'
+import Nav from '../compo/AppBar'
 
 const Categorias = () => {
 const [cate,setCate] = useState([])
@@ -34,6 +35,7 @@ const fetchCate = async () =>{
           )
         })
       }
+      
     </div>
   );
 }
