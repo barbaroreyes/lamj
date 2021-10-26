@@ -116,9 +116,9 @@ span{
   flex-direction: column;
   align-items: center; */
 }.categoria-box{
- padding:6px;
+ padding:2px;
   margin: 9px;
-  height: 116px;
+  height: 111px;
   border: 1px solid gold;
   width: 100px;
   color: rgb(235, 233, 222);
