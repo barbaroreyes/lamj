@@ -41,6 +41,7 @@ export const getCate = /* GraphQL */ `
     getCate(id: $id) {
       id
       name
+      price
       createdAt
       updatedAt
     }
@@ -56,6 +57,7 @@ export const listCates = /* GraphQL */ `
       items {
         id
         name
+        price
         createdAt
         updatedAt
       }

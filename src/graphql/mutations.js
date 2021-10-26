@@ -60,6 +60,7 @@ export const createCate = /* GraphQL */ `
     createCate(input: $input, condition: $condition) {
       id
       name
+      price
       createdAt
       updatedAt
     }
@@ -73,6 +74,7 @@ export const updateCate = /* GraphQL */ `
     updateCate(input: $input, condition: $condition) {
       id
       name
+      price
       createdAt
       updatedAt
     }
@@ -86,6 +88,7 @@ export const deleteCate = /* GraphQL */ `
     deleteCate(input: $input, condition: $condition) {
       id
       name
+      price
       createdAt
       updatedAt
     }
