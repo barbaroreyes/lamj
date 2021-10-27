@@ -4,7 +4,8 @@ import {listCates} from '../graphql/queries'
 import Categoria from '../compo/Categoria'
 
 
-const Categorias = (props) => {
+const Categorias = ({jollas}) => {
+  console.log('jollas in categorias',jollas)
 const [cate,setCate] = useState([])
 
 useEffect(() => {
@@ -31,7 +32,10 @@ const fetchCate = async () =>{
       {
         cate.map((item,i)=>{
           return (
-            < Categoria{...item}/>
+            < Categoria
+            {...item}
+            {...jollas}
+            />
           )
         })
       }

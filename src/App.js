@@ -8,10 +8,11 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Categorias from './pages/Categorias';
 import Contact from './pages/Contact';
+import Group from './compo/Group'
 import './App.css';
-
 import { makeStyles } from '@mui/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+// import CssBaseline from '@mui/material/CssBaseline';
+// import { filledInputClasses } from '@mui/material';
  Amplify.configure(awsconfigure)
 
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme)=>({
  
     
 
-export default function App() {
+ function App() {
   const classes = useStyles();
   
  const [jollas,setJollas] =useState([])
@@ -39,13 +40,15 @@ export default function App() {
  useEffect(()=>{
    fechtJollas()
  },[])
+ 
+
 
  
 
  const fechtJollas = async () =>{
    try {
      const jollasData = await API.graphql(graphqlOperation(listPrendas))
-     const jollasList = jollasData.data.listPrendas.items.filter(item => item.categoria)
+     const jollasList = jollasData.data.listPrendas.items
      console.log( 'lista de jollas',jollasList)
      setJollas(jollasList)
      
@@ -53,23 +56,20 @@ export default function App() {
      
    }
  }
-  console.log(cate,'cate')
-
- 
-
-
-  return <div className={classes.root}>
+ return <div className={classes.root}>
     <Switch>
       <Route exact path ='/'>
         <Home />
-       
-      </Route>
+       </Route>
       <Route exact path ='/categorias'>
-        <Categorias jollas ={jollas}/>
+        <Categorias />
        
       </Route>
       <Route exact path ='/about'>
         <About/>
+      </Route>
+      <Route exact path='/group'>
+        <Group jollas ={jollas}/>
       </Route>
       <Route exact path ='/contact'>
         <Contact/>
@@ -78,7 +78,7 @@ export default function App() {
      
   </div> 
 }
-      
+export default App   
 
        
     
