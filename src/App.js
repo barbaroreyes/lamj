@@ -4,11 +4,13 @@ import Amplify,{API,graphqlOperation} from 'aws-amplify';
 import  awsconfigure from './aws-exports'
 // import StripeCheckout from 'react-stripe-checkout';
 import {listPrendas}from './graphql/queries'
-import About from './pages/About'
-import Home from './pages/Home'
+// import About from './pages/About'
+import Home from './pages copy/Home'
+import ProductsList from './pages copy/ProductsList'
+import Product from './pages copy/Product'
 import Categorias from './pages/Categorias';
 import Contact from './pages/Contact';
-import Group from './compo/Group'
+// import Group from './compo/Group'
 import './App.css';
 import { makeStyles } from '@mui/styles';
 // import CssBaseline from '@mui/material/CssBaseline';
@@ -20,10 +22,10 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme)=>({
   root:{
-    minHeight:'100vh',
-    backgroundImage:`url(https://lamjce9b1a58db81496d90b0f125b07c8929185751-dev.s3.amazonaws.com/public/fondo-de+pantalla.jpeg)`,
-    backgroundRepeat:'no-repeat',
-    backgroundSize:'cover'
+    // minHeight:'100vh',
+    // backgroundImage:`url(https://lamjce9b1a58db81496d90b0f125b07c8929185751-dev.s3.amazonaws.com/public/fondo-de+pantalla.jpeg)`,
+    // backgroundRepeat:'no-repeat',
+    // backgroundSize:'cover'
   }
 }))
 
@@ -61,15 +63,15 @@ const useStyles = makeStyles((theme)=>({
       <Route exact path ='/'>
         <Home />
        </Route>
-      <Route exact path ='/categorias'>
-        <Categorias />
+      <Route exact path ='/productlist'>
+        <ProductsList/>
        
       </Route>
-      <Route exact path ='/about'>
-        <About/>
+      <Route exact path ='/product'>
+       <Product/>
       </Route>
       <Route exact path='/group'>
-        <Group jollas ={jollas}/>
+       group
       </Route>
       <Route exact path ='/contact'>
         <Contact/>
